@@ -20,12 +20,17 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #888;
+  color: #525252;
   font-size: 15px;
 }
-
+.top-left span:hover{
+  color: #fc5a0e;
+}
 .top-center {
   margin-left: 20px;
+}
+.top-center span:hover{
+  color: #ff5b0e;
 }
 
 .top-right a {
@@ -46,6 +51,10 @@
   align-items: center;
   padding: 20px 40px;
   background-color: #fff;
+  position: sticky;       /* Make it sticky */
+  top: 0;                 /* Stick to top */
+  z-index: 1000;          /* Ensure it stays above everything */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Optional shadow for clarity */
 }
 
 .logo {
@@ -104,4 +113,200 @@
 .schedule-btn:hover i {
   background-color: #111;
   color: #fff;
+}
+
+/* banner */
+input[type="radio"] {
+  display: none;
+}
+
+/* --- Slider Base Styles --- */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* --- Each Slide --- */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  z-index: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* --- Text on Images --- */
+.text-overlay {
+  position: absolute;
+  top: 30%;
+  left: 8%;
+  color: white;
+  z-index: 2;
+}
+
+.text-overlay .location {
+  background: white;
+  color: #333;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.highlight {
+  color: #ff3d00;
+}
+
+.text-overlay h1 {
+  font-size: 48px;
+  font-weight: 900;
+  margin-top: 20px;
+  line-height: 1.2;
+}
+
+/* --- Show only selected slide --- */
+#slide1:checked ~ .slider .s1,
+#slide2:checked ~ .slider .s2,
+#slide3:checked ~ .slider .s3 {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* --- Arrows --- */
+.nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+  padding: 0 30px;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.nav label {
+  background: rgba(255, 255, 255, 0.6);
+  color: #000;
+  padding: 10px 15px;
+  font-size: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.nav label:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* --- Show arrows for selected slide --- */
+#slide1:checked ~ .slider .nav1,
+#slide2:checked ~ .slider .nav2,
+#slide3:checked ~ .slider .nav3 {
+  display: flex;
+}
+/* middle section */
+.property-highlight {
+  display: flex;
+  gap: 30px;
+  padding: 60px 80px;
+  background-color: #fff;
+  flex-wrap: wrap;
+}
+
+/* Left Image */
+.property-image img {
+  width: 350px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Middle Text Info */
+.property-info {
+  flex: 1;
+  max-width: 500px;
+}
+
+.property-info .featured {
+  color: #ff5e14;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.property-info h2 {
+  font-size: 36px;
+  margin: 10px 0 30px;
+}
+
+.useful-links {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.useful-links h4 {
+  color: #ff5e14;
+  margin-bottom: 10px;
+}
+
+.useful-links p {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.useful-links a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+/* Right Features Box */
+.property-features {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  min-width: 250px;
+}
+
+.property-features .feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.property-features .feature:last-child {
+  border-bottom: none;
+}
+
+.property-features img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.property-features h4 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.property-features p {
+  font-size: 14px;
+  color: gray;
+  margin: 2px 0 0;
 }
