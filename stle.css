@@ -87,7 +87,7 @@
 }
 
 /* Schedule Button */
-.schedule-btn {
+.schedule-btnn {
   display: flex;
   align-items: center;
   background-color: #111;
@@ -309,4 +309,355 @@ input[type="radio"] {
   font-size: 14px;
   color: gray;
   margin: 2px 0 0;
+}
+
+/* Section with background image and overlay */
+.video-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent dark layer */
+    text-align: center;
+    color: white;
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Sub-heading */
+.sub-heading {
+    color: #f76c6c;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Main heading */
+.overlay h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 50px;
+}
+
+/* Video box styling */
+.video-thumbnail {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+/* Play button styling */
+.play-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff5e57;
+    color: white;
+    font-size: 40px;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: #e04848;
+}
+/* Stats Section */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 20px 40px;
+  background-color: #fff;
+  margin-top:70px;
+}
+
+.stat-box {
+  background-color: #ffece6;
+  padding: 30px 40px;
+  border-radius: 15px;
+  position: relative;
+  text-align: left;
+  min-width: 200px;
+}
+
+.stat-box .circle {
+  width: 50px;
+  height: 50px;
+  background-color: #f2542d;
+  border-radius: 50%;
+  position: absolute;
+  top: -25px;
+  right: -25px;
+}
+
+.stat-box h2 {
+  color: #f2542d;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.stat-box p {
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+/* Deal Section */
+.deal-section {
+  background-color: #fafafa;
+  padding: 60px 20px;
+  text-align: center;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.deal-section .section-label {
+  color: #f2546d;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.deal-section h2 {
+  font-size: 42px;
+  color: #111;
+  font-weight: 800;
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+
+/* Deal Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #111;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #333;
+}
+
+.buttons .active {
+  background-color: #f2542d;
+}
+/* Main layout */
+.property-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 80px;
+  gap: 40px;
+}
+
+/* Left info card */
+.property-info {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  min-width: 220px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: #999;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.info-item strong {
+  color: #111;
+  font-weight: bold;
+}
+
+/* Center Image */
+.property-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Right Description */
+.property-description {
+  max-width: 400px;
+}
+
+.property-description h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.property-description p {
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.visit-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #111;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.visit-btn .icon {
+  background: #f2542d;
+  color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.visit-btn:hover {
+  background-color: #333;
+}
+
+/* General container for all the cards */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 20px;
+}
+/* General container for all the cards */
+.property-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin: 40px 0;
+  padding: 0 10px;
+}
+
+/* Individual Card Styling */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 320px; /* Reduced max width for a more compact look */
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px); /* Slight lift on hover */
+}
+
+/* Card Image Styling */
+.card-img {
+  width: 100%;
+  height: 220px; /* Adjusted height for a more balanced look */
+  object-fit: cover;
+  border-radius: 5px;
+  /* border-bottom: 4px solid #f25c54; */
+}
+
+/* Card Details Section */
+.card-details {
+  padding: 15px; /* Reduced padding for a tighter design */
+}
+
+.luxury-label {
+  display: inline-block;
+  background-color: #f67e7e;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.card-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+}
+
+.card-address {
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+ul li {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* Schedule Button Styling */
+.schedule-btn {
+  background-color: #070404;
+  color: white;
+  border: none;
+  padding: 8px 16px; /* Smaller padding */
+  font-size: 14px; /* Smaller text */
+  border-radius: 20px; /* Rounded button for a sleek look */
+  cursor: pointer;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.schedule-btn:hover {
+  background-color: #e04d44;
+  transform: scale(1.05); /* Slight scaling on hover */
+}
+
+.schedule-btn:focus {
+  outline: none;
 }
